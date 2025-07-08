@@ -26,7 +26,10 @@ public class Main {
             System.out.println("Ви заплуталися");
             health -= 10;
             System.out.println("Ви заплуталися і втратили 10 очок здоров’я.");
-        }
+        } else if (choice1 <= 0) {System.out.println("Ви заплуталися");
+            health -= 10;
+            System.out.println("Ви заплуталися і втратили 10 очок здоров’я.");
+    }
 // Action 2
         System.out.println("Перед Вами постає загадковий колодязь");
         System.out.println("Що Ви зробите? 1 - вип'єте магічної води, 2 - ігноруєте колодязь ");
@@ -43,7 +46,9 @@ public class Main {
         } else if (choice2 > 2) {
             System.out.println("Ви нічого не обрали");
             System.out.println("Ваш стан здоров'я та удачі не змінився ");
-
+        } else if (choice2 <= 0) {
+            System.out.println("Ви нічого не обрали");
+            System.out.println("Ваш стан здоров'я та удачі не змінився ");
         }
 // Action 3
         System.out.println(" Ви зустріли на шляху чарівну істоту, яка перевірить Вашу талан");
@@ -55,7 +60,7 @@ public class Main {
         } else if (choiceOfCreature == 2) {
             System.out.println("Істота ворожа та атакує, при цьому забирає 30 очок здоров’я.");
             health -=30;
-        } else if (choice2 == 3) {
+        } else if (choiceOfCreature == 3) {
             System.out.println("Істота байдужа до Вас і нічого не змінює");}
 // Player Status Chek
         System.out.println("Поточний стан Вашого здоров'я: " + health);
